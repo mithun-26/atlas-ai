@@ -1,0 +1,127 @@
+{
+  "project_name": "Atlas AI",
+  "domain": "Enterprise Multimodal Agentic RAG Platform",
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "design_philosophy": "Objective, rigid, and functional. High-contrast control room aesthetic. Data density is prioritized over decorative elements. Borders are sharp (1px solid), padding is mathematical, and color is used exclusively to signal action or state changes.",
+  "colors": {
+    "background": "#000000",
+    "surface": "#0A0A0A",
+    "surface_hover": "#141414",
+    "border": "#222222",
+    "foreground_primary": "#FFFFFF",
+    "foreground_secondary": "#A0A0A0",
+    "foreground_muted": "#666666",
+    "accent_primary": "#FF3B30", 
+    "accent_primary_hover": "#D63026",
+    "accent_foreground": "#FFFFFF",
+    "semantic": {
+      "success": "#00C853",
+      "warning": "#FFD600",
+      "error": "#FF3B30",
+      "info": "#007AFF"
+    }
+  },
+  "typography": {
+    "fonts": [
+      {
+        "family": "Chivo",
+        "usage": "Headings, primary metrics, high-level structural text.",
+        "url": "https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap"
+      },
+      {
+        "family": "IBM Plex Sans",
+        "usage": "Body text, chat bubbles, UI labels.",
+        "url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+      },
+      {
+        "family": "IBM Plex Mono",
+        "usage": "Citations, code blocks, metadata, timestamps.",
+        "url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "scale": {
+      "h1": "text-4xl sm:text-5xl tracking-tighter font-black",
+      "h2": "text-2xl sm:text-3xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-bold",
+      "h4": "text-lg sm:text-xl tracking-tight font-semibold",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm tracking-wide",
+      "overline": "text-xs tracking-[0.2em] uppercase font-mono"
+    }
+  },
+  "layout_and_spacing": {
+    "grid_system": "Control Room Grid (Mode B). grid-cols-1 lg:grid-cols-12 gap-px bg-[#222222] to create 1px grid lines between columns.",
+    "columns": {
+      "left_panel": "col-span-1 lg:col-span-3 (Document Management). Dense lists, tactile drag-drop area.",
+      "center_panel": "col-span-1 lg:col-span-6 (Streaming Chat). Maximum focus, comfortable reading width.",
+      "right_panel": "col-span-1 lg:col-span-3 (Sources & Citations). Stacked cards, metadata focus."
+    },
+    "spacing_scale": "Strict Tailwind scale. Internal padding in panels MUST be p-6 or p-8.",
+    "surfaces": "Grid Borders (The Technical Look). Minimal border-radius (rounded-none or rounded-sm max). 1px solid borders border-border. No drop shadows, use solid black offset shadows if elevation is necessary."
+  },
+  "components": {
+    "drag_and_drop_upload": {
+      "style": "border-dashed border-2 border-[#333333] hover:border-[#FF3B30] bg-[#0A0A0A] hover:bg-[#141414] transition-all duration-200. Text is centered, minimal icon.",
+      "states": "Active upload shows progress bar with sharp, neon-bright fill (e.g., #FFFFFF or #FF3B30)."
+    },
+    "chat_interface": {
+      "user_bubble": "bg-[#1A1A1A] text-white p-4 rounded-sm border border-[#333333] ml-auto max-w-[85%]",
+      "ai_bubble": "bg-transparent text-white p-4 max-w-[100%] border-l-2 border-[#FF3B30] pl-6",
+      "markdown": "Prose dark styling. Inline code blocks must use IBM Plex Mono with bg-[#1A1A1A] px-1.5 py-0.5. Blockquotes use left border.",
+      "typing_indicator": "Minimal ASCII-style blinking cursor (█) or 3 fading dots."
+    },
+    "citations_panel": {
+      "card_style": "bg-[#0A0A0A] border border-[#222222] p-4 flex flex-col gap-2 rounded-sm",
+      "highlight_state": "When a source is referenced in chat, the corresponding citation card border turns to #FF3B30 and text turns pure white.",
+      "metadata": "Use overline typography (uppercase, tracked out, IBM Plex Mono) for document types (PDF, DOCX) and page numbers."
+    },
+    "buttons": {
+      "primary": "bg-white text-black font-bold uppercase tracking-widest px-6 py-3 rounded-none hover:bg-[#FF3B30] hover:text-white transition-colors duration-200",
+      "secondary": "bg-transparent text-white border border-[#333333] hover:border-white px-4 py-2 rounded-none transition-colors duration-200"
+    },
+    "inputs": {
+      "chat_input": "bg-[#0A0A0A] border border-[#333333] focus:border-white text-white p-4 w-full rounded-sm outline-none transition-colors ring-0"
+    }
+  },
+  "animation_and_motion": {
+    "transitions": "Fast and snappy. transition-all duration-150 ease-out.",
+    "hover_states": "High contrast shifts. Borders go from dark gray to pure white or signal orange. Backgrounds shift slightly lighter.",
+    "streaming": "Text appears seamlessly. Animate citation cards sliding in from the right when generated."
+  },
+  "icons_and_assets": {
+    "library": "@phosphor-icons/react",
+    "style": "Duotone or Regular weight. Must match the exact text color of their container.",
+    "installation": "yarn add @phosphor-icons/react"
+  },
+  "images": {
+    "avatar_placeholder": {
+      "url": "https://images.pexels.com/photos/31757550/pexels-photo-31757550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Bold geometric black and white pattern for abstract avatar/system identity."
+    },
+    "empty_state_background": {
+      "url": "https://images.pexels.com/photos/17194838/pexels-photo-17194838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Ethereal fiber optic strands. Apply heavy opacity overlay (e.g. 10%) so it doesn't distract from data."
+    }
+  },
+  "accessibility_and_testing": {
+    "contrast": "Ensure all text meets at least 4.5:1 against #000000. Muted text must not drop below #666666.",
+    "focus": "All interactive elements must have focus:ring-2 focus:ring-[#FF3B30] focus:ring-offset-2 focus:ring-offset-black.",
+    "testing_attributes": {
+      "upload_area": "data-testid='doc-upload-zone'",
+      "chat_input": "data-testid='chat-input-field'",
+      "send_button": "data-testid='chat-send-button'",
+      "citation_card": "data-testid='citation-card'",
+      "doc_list_item": "data-testid='doc-list-item'"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the dark theme colors defined. Never use default Tailwind blue or purple.",
+    "Use Phosphor icons for all iconography. Avoid mixing icon libraries.",
+    "The layout must be a strict 3-column bento-style grid on desktop (12 columns split 3-6-3). On mobile, stack them: Chat first, then Docs, then Citations.",
+    "Include data-testid attributes on all interactive elements as specified.",
+    "Ensure the Chat area supports Markdown rendering (react-markdown) and syntax highlighting.",
+    "Do NOT use glassmorphism (backdrop-blur) anywhere in the main layout. Use solid black/gray colors with 1px borders for the technical Swiss aesthetic.",
+    "In Tailwind config, map the provided colors to custom variables or directly extend the theme."
+  ]
+}

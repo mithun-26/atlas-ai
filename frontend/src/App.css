@@ -1,0 +1,217 @@
+/* Atlas AI - Component Styles */
+
+/* Typing cursor animation */
+.typing-cursor::after {
+  content: '\2588';
+  animation: blink 1s step-end infinite;
+  color: #FF3B30;
+  font-weight: 400;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Markdown prose styling */
+.atlas-prose h1 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+  color: #FFFFFF;
+}
+
+.atlas-prose h2 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  color: #FFFFFF;
+}
+
+.atlas-prose h3 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0.75rem;
+  color: #FFFFFF;
+}
+
+.atlas-prose p {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #E0E0E0;
+}
+
+.atlas-prose strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.atlas-prose em {
+  color: #A0A0A0;
+}
+
+.atlas-prose ul, .atlas-prose ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.atlas-prose li {
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+  color: #E0E0E0;
+}
+
+.atlas-prose ul li {
+  list-style-type: disc;
+}
+
+.atlas-prose ol li {
+  list-style-type: decimal;
+}
+
+.atlas-prose code {
+  font-family: 'IBM Plex Mono', monospace;
+  background: #1A1A1A;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875rem;
+  color: #FF3B30;
+  border-radius: 2px;
+}
+
+.atlas-prose pre {
+  background: #0A0A0A;
+  border: 1px solid #222222;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 0.75rem;
+  border-radius: 2px;
+}
+
+.atlas-prose pre code {
+  background: transparent;
+  padding: 0;
+  color: #E0E0E0;
+}
+
+.atlas-prose blockquote {
+  border-left: 2px solid #FF3B30;
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+  color: #A0A0A0;
+  font-style: italic;
+}
+
+.atlas-prose a {
+  color: #FF3B30;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.atlas-prose hr {
+  border-color: #222222;
+  margin: 1rem 0;
+}
+
+.atlas-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+}
+
+.atlas-prose th, .atlas-prose td {
+  border: 1px solid #222222;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.atlas-prose th {
+  background: #0A0A0A;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* Drag & drop active state */
+.drop-active {
+  border-color: #FF3B30 !important;
+  background-color: #141414 !important;
+}
+
+/* Citation highlight */
+.citation-highlight {
+  border-color: #FF3B30 !important;
+  background-color: #141414 !important;
+}
+
+/* Entrance animations */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.2s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.15s ease-out;
+}
+
+/* Processing pulse */
+@keyframes processingPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.processing-pulse {
+  animation: processingPulse 1.5s ease-in-out infinite;
+}
+
+/* Stagger children animation */
+.stagger-children > * {
+  animation: fadeIn 0.15s ease-out both;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
+
+/* Chat input auto-resize */
+.chat-textarea {
+  resize: none;
+  overflow-y: auto;
+  max-height: 160px;
+  min-height: 52px;
+}
+
+/* Source reference inline tags */
+.source-tag {
+  display: inline;
+  background: rgba(255, 59, 48, 0.15);
+  color: #FF3B30;
+  padding: 0 0.25rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 2px;
+}
